@@ -2,12 +2,16 @@
 {% block title %}Edit post!{% endblock %}
 {% block content %}
 
-<h1>Update post..</h1>
-<div class="form-group">
-    <form method="POST">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button class="btn btn-dark">Update</button>
-    </form>
-</div>
+{% if user.is_authenticated %}
+    <h1>Update post..</h1>
+    <div class="form-group">
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="btn btn-dark">Update</button>
+        </form>
+    </div>
+{% else %}
+You're not allowed here!
+{% endif %}
 {% endblock %}
