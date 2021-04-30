@@ -8,12 +8,12 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 
-    <title>{% block title %}Yerba Mate{% endblock %}</title>
+    <title>{% block title %}Single Malt{% endblock %}</title>
   </head>
   <body>
   <nav class="navbar navbar-expand-lg navbar-dark  bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="{% url 'home' %}">Yerba Mate</a>
+    <a class="navbar-brand" href="{% url 'home' %}">Single Malt</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -22,7 +22,7 @@
             <!-- Categories -->
         {% if cat_menu %}
        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Categories</a>
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-bs-toggle="dropdown" aria-expanded="false">Categories</a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             {% for item in cat_menu %}
             <a class="dropdown-item" href="{% url 'category' item|slugify %}">{{ item }}</a>
@@ -36,10 +36,20 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{% url 'add_category' %}">Add category</a>
-        </li>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'edit_profile' %}">Edit profile</a>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Profile
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="{% url 'edit_profile' %}">Edit Setting</a></li>
+            {% if user.profile.id %}
+                <li><a class="dropdown-item" href="{% url 'edit_profile_page' user.profile.id %}">Edit Profile Page</a></li>
+                <li><a class="dropdown-item" href="{% url 'show_profile_page' user.profile.id %}">Show Profile Page</a></li>
+            {% else %}
+                <li><a class="dropdown-item" href="{% url 'create_profile_page' %}">Create Profile Page</a></li>
+            {% endif %}
+          </ul>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{% url 'logout' %}">Log out</a>
