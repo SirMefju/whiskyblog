@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block title %}Edit profile page!{% endblock %}
 {% block content %}
-
+<body style="background-color:#dadee0;">
 {% if user.is_authenticated %}
     {% if user.id == profile.user.id %}
         <h1>Edit profile</h1>
