@@ -1,4 +1,4 @@
-#Simple blog about Whisky
+# Simple blog about Whisky
 ## Table of contents
 * [Technologies](#technologies)
 * [Setup](#setup)
