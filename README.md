@@ -1,2 +1,3 @@
 # yerbablog
 sooooooooooooooooooooooooooooooooooon....
+![](https://github.com/SirMefju/whiskyblog/clips/blob/master/setupclip.mp4)
