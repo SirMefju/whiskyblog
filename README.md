@@ -15,6 +15,7 @@ PyCharm 2021.1.1
 Google Chrome 90.0.4430.93  
 ```
 ## Setup
+Git bash:
 https://user-images.githubusercontent.com/61458803/116823374-6f85bb00-ab84-11eb-96ce-a0b5f4250903.mp4
 
 ## LookAround
