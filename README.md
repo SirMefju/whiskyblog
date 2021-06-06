@@ -1,4 +1,4 @@
-# Simple blog about Whiseky
+# Simple blog about Whisky
 Blog written in Python with django framework and html.
 ## Table of contents
 * [Technologies](#technologies)
