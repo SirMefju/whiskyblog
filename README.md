@@ -1,6 +1,6 @@
 # Simple blog about Whisky
 Blog written in Python with django framework and html.
-## Table of contents
+## Table of contentss
 * [Technologies](#technologies)
 * [Setup](#setup)
 * [Look around](#look-around)
