@@ -3,7 +3,7 @@ Blog written in Python with django framework and html.
 ## Table of contents
 * [Technologies](#technologies)
 * [Setup](#setup)
-* [Look around](#look-around)
+* [Look around](#look-around)z
 
 
 ## Technologies
